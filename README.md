@@ -41,7 +41,7 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
-dcbrtBy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-dcbrt-by@umd/browser.js' )
+dcbrtBy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-dcbrt-by@v0.0.1-umd/browser.js' )
 ```
 
 To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
@@ -53,7 +53,7 @@ var dcbrtBy = require( 'path/to/vendor/umd/math-strided-special-dcbrt-by/index.j
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-dcbrt-by@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-dcbrt-by@v0.0.1-umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
