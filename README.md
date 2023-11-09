@@ -343,9 +343,9 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/math-strided-special-dcbrt-by/main/LICENSE
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/stdlib
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
-[@stdlib/math/base/special/cbrt]: https://github.com/stdlib-js/stdlib
+[@stdlib/math/base/special/cbrt]: https://github.com/stdlib-js/math-base-special-cbrt
 
 </section>
 
