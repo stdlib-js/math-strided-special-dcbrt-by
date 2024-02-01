@@ -43,38 +43,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-strided-special-dcbrt-by
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-dcbrtBy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-dcbrt-by@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var dcbrtBy = require( 'path/to/vendor/umd/math-strided-special-dcbrt-by/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-dcbrt-by@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.dcbrtBy;
-})();
-</script>
+var dcbrtBy = require( '@stdlib/math-strided-special-dcbrt-by' );
 ```
 
 #### dcbrtBy( N, x, strideX, y, strideY, clbk\[, thisArg] )
@@ -246,13 +240,8 @@ dcbrtBy.ndarray( 3, x, 2, 1, out, -1, out.length-1, accessor );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
+```javascript
+var uniform = require( '@stdlib/random-base-uniform' ).factory;
 var filledarray = require( '@stdlib/array-filled' );
 var filledarrayBy = require( '@stdlib/array-filled-by' );
 var dcbrtBy = require( '@stdlib/math-strided-special-dcbrt-by' );
@@ -273,11 +262,6 @@ console.log( out );
 
 dcbrtBy.ndarray( x.length, x, 1, 0, out, -1, out.length-1, accessor );
 console.log( out );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -355,15 +339,18 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
 [deno-url]: https://github.com/stdlib-js/math-strided-special-dcbrt-by/tree/deno
+[deno-readme]: https://github.com/stdlib-js/math-strided-special-dcbrt-by/blob/deno/README.md
 [umd-url]: https://github.com/stdlib-js/math-strided-special-dcbrt-by/tree/umd
+[umd-readme]: https://github.com/stdlib-js/math-strided-special-dcbrt-by/blob/umd/README.md
 [esm-url]: https://github.com/stdlib-js/math-strided-special-dcbrt-by/tree/esm
+[esm-readme]: https://github.com/stdlib-js/math-strided-special-dcbrt-by/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/math-strided-special-dcbrt-by/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/math-strided-special-dcbrt-by/main/LICENSE
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/umd
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
-[@stdlib/math/base/special/cbrt]: https://github.com/stdlib-js/math-base-special-cbrt/tree/umd
+[@stdlib/math/base/special/cbrt]: https://github.com/stdlib-js/math-base-special-cbrt
 
 </section>
 
