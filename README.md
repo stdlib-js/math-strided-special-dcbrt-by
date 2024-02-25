@@ -43,32 +43,20 @@ limitations under the License.
 
 <!-- /.intro -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/math-strided-special-dcbrt-by
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var dcbrtBy = require( '@stdlib/math-strided-special-dcbrt-by' );
+import dcbrtBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-dcbrt-by@deno/mod.js';
+```
+
+You can also import the following named exports from the package:
+
+```javascript
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-dcbrt-by@deno/mod.js';
 ```
 
 #### dcbrtBy( N, x, strideX, y, strideY, clbk\[, thisArg] )
@@ -76,7 +64,7 @@ var dcbrtBy = require( '@stdlib/math-strided-special-dcbrt-by' );
 Computes the [cube root][@stdlib/math/base/special/cbrt] of each element retrieved from an input double-precision floating-point strided array via a callback function and assigns each result to an element in an output double-precision floating-point strided array.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 function accessor( v ) {
     return v;
@@ -109,7 +97,7 @@ The invoked callback function is provided four arguments:
 To set the callback execution context, provide a `thisArg`.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 function accessor( v ) {
     this.count += 1;
@@ -133,7 +121,7 @@ var cnt = context.count;
 The `N` and stride parameters determine which strided array elements are accessed at runtime. For example, to index every other value in `x` and to index the first `N` elements of `y` in reverse order,
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 function accessor( v ) {
     return v;
@@ -149,7 +137,7 @@ dcbrtBy( 3, x, 2, out, -1, accessor );
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][@stdlib/array/float64] views.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 function accessor( v ) {
     return v;
@@ -172,7 +160,7 @@ dcbrtBy( 3, x1, -2, out1, 1, accessor );
 Computes the [cube root][@stdlib/math/base/special/cbrt] of each element retrieved from an input double-precision floating-point strided array via a callback function and assigns each result to an element in an output double-precision floating-point strided array using alternative indexing semantics.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 function accessor( v ) {
     return v;
@@ -193,7 +181,7 @@ The function accepts the following additional arguments:
 While [`typed array`][@stdlib/array/float64] views mandate a view offset based on the underlying `buffer`, the offset parameters support indexing semantics based on starting indices. For example, to index every other value in `x` starting from the second value and to index the last `N` elements in `y`,
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 function accessor( v ) {
     return v;
@@ -217,7 +205,7 @@ dcbrtBy.ndarray( 3, x, 2, 1, out, -1, out.length-1, accessor );
 -   If a provided callback function does not return any value (or equivalently, explicitly returns `undefined`), the value is **ignored**.
 
     ```javascript
-    var Float64Array = require( '@stdlib/array-float64' );
+    import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
     function accessor() {
         // No-op...
@@ -241,10 +229,10 @@ dcbrtBy.ndarray( 3, x, 2, 1, out, -1, out.length-1, accessor );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var uniform = require( '@stdlib/random-base-uniform' ).factory;
-var filledarray = require( '@stdlib/array-filled' );
-var filledarrayBy = require( '@stdlib/array-filled-by' );
-var dcbrtBy = require( '@stdlib/math-strided-special-dcbrt-by' );
+var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform' ).factory;
+import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@deno/mod.js';
+import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
+import dcbrtBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-dcbrt-by@deno/mod.js';
 
 function accessor( v, i ) {
     if ( (i%3) === 0 ) {
@@ -285,7 +273,7 @@ console.log( out );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -348,9 +336,9 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/math-strided-special-dcbrt-by/main/LICENSE
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/deno
 
-[@stdlib/math/base/special/cbrt]: https://github.com/stdlib-js/math-base-special-cbrt
+[@stdlib/math/base/special/cbrt]: https://github.com/stdlib-js/math-base-special-cbrt/tree/deno
 
 </section>
 
