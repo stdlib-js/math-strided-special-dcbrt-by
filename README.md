@@ -50,13 +50,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import dcbrtBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-dcbrt-by@deno/mod.js';
+import dcbrtBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-dcbrt-by@v0.2.2-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-dcbrt-by@deno/mod.js';
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-dcbrt-by@v0.2.2-deno/mod.js';
 ```
 
 #### dcbrtBy( N, x, strideX, y, strideY, clbk\[, thisArg] )
@@ -232,7 +232,7 @@ dcbrtBy.ndarray( 3, x, 2, 1, out, -1, out.length-1, accessor );
 var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform' ).factory;
 import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@deno/mod.js';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
-import dcbrtBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-dcbrt-by@deno/mod.js';
+import dcbrtBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-dcbrt-by@v0.2.2-deno/mod.js';
 
 function accessor( v, i ) {
     if ( (i%3) === 0 ) {
